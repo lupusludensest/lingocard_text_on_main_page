@@ -26,7 +26,7 @@ class MainPage(Page):
         """
         Verify if there are 11 boxes in the hamburger menu
         """
-        sleep(5)
+        sleep(2)
         self.len_counting(expected_value, *self.ELEVEN_ITEMS_HERE)
 
 
