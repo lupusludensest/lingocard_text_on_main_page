@@ -9,4 +9,4 @@ Feature: Lingocard_partnership_request_form
     Then User enters e-mail gurovvic@gmail.com
     Then User enters request Test request
     Then User clicks on send button
-    Then Verify that field Your message has no text ""
+    Then Verify that field Your message has no text at all

@@ -36,9 +36,9 @@ def user_clicks_send_btn(context):
     context.app.main_page.user_clicks_send_btn()
 
 
-@then("Verify that field Your message has no text {no_text}")
-def text_message_fld(context, no_text):
+@then("Verify that field Your message has no text {text}")
+def text_message_fld(context, text):
     """
     Verify that field Your message has text Your message
     """
-    context.app.main_page.text_message_fld(no_text)
+    context.app.main_page.text_message_fld(text)

@@ -49,4 +49,4 @@ class Page:
 
     def string_is_empthy(self, emthy_string, *locator):
         actual_string = self.driver.find_element(*locator).text
-        assert emthy_string == "", f'Expected text {emthy_string}, but got {actual_string}'
+        assert int(len(actual_string)) == 0, f'Expected text {emthy_string}, but got {actual_string}'

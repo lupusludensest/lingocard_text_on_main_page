@@ -14,6 +14,11 @@ class MainPage(Page):
     TEXT_FIELD = (By.NAME, "text")
     SEND_BTN = (By.CSS_SELECTOR, "button.btn.btn-white.form-btn")
     TEXT_FIELD_W_TEXT = (By. XPATH, "//textarea[@placeholder='Your message']")
+    # CONTACT_US_BTN = (By.XPATH, "//div[@class='contact-us text-center flex-container content-center']")
+    # CONTACT_US_BTN = (By.CSS_SELECTOR, "div.contact-us.text-center.flex-container.content-center")
+    LANGUAGES_FLD = (By.ID, "languages")
+    LEARN_MORE_BTN = (By.CSS_SELECTOR, "a.btn.btn-white")
+    CR_AND_DEV_PLTFRM = (By.CSS_SELECTOR, "ul.platform-list.flex-container.space-between")
 
     def verify_text_here(self, text):
         """
@@ -54,7 +59,7 @@ class MainPage(Page):
 
     def user_enters_text(self, text):
         """
-        User enters text
+        User enters request
         """
         self.input_text(text, *self.TEXT_FIELD)
 
@@ -66,8 +71,32 @@ class MainPage(Page):
 
     def text_message_fld(self, text):
         """
-        Verify that field Your message has text Your message
+        Verify that field Your message has no text
         """
         self.string_is_empthy(text, *self.TEXT_FIELD_W_TEXT)
 
+    def verify_albanian(self,text):
+        """
+        Verify Albanian is here
+        """
+        self.verify_text(text, *self.LANGUAGES_FLD)
+
+    def verify_hungarian(self,text):
+        """
+        Verify Albanian is here
+        """
+        self.verify_text(text, *self.LANGUAGES_FLD)
+
+    def learn_more_btn(self):
+        """
+        Verify Hungarian is here
+        """
+        sleep(4)
+        self.click(*self.LEARN_MORE_BTN)
+
+    def verify_cr_and_dev_pltfrm(self, text):
+        """
+        Verify Creating and developing platform is here
+        """
+        self.verify_text(text, *self.CR_AND_DEV_PLTFRM)
 
