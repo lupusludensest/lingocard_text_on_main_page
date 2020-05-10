@@ -19,6 +19,7 @@ class MainPage(Page):
     LANGUAGES_FLD = (By.ID, "languages")
     LEARN_MORE_BTN = (By.CSS_SELECTOR, "a.btn.btn-white")
     CR_AND_DEV_PLTFRM = (By.CSS_SELECTOR, "ul.platform-list.flex-container.space-between")
+    EMAIL_BTN =(By.CSS_SELECTOR, "a.email-link")
 
     def verify_text_here(self, text):
         """
@@ -99,4 +100,10 @@ class MainPage(Page):
         Verify Creating and developing platform is here
         """
         self.verify_text(text, *self.CR_AND_DEV_PLTFRM)
+
+    def click_contact_us_btn(self):
+        self.click(*self.EMAIL_BTN)
+
+    def email_is_hr_in_href(self, text):
+        self.verify_text(text, *self.EMAIL_BTN)
 
