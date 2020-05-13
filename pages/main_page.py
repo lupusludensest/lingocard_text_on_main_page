@@ -76,13 +76,7 @@ class MainPage(Page):
         """
         self.string_is_empthy(text, *self.TEXT_FIELD_W_TEXT)
 
-    def verify_albanian(self,text):
-        """
-        Verify Albanian is here
-        """
-        self.verify_text(text, *self.LANGUAGES_FLD)
-
-    def verify_hungarian(self,text):
+    def verify_language(self,text):
         """
         Verify Albanian is here
         """
@@ -90,7 +84,7 @@ class MainPage(Page):
 
     def learn_more_btn(self):
         """
-        Verify Hungarian is here
+        Verify Language is here
         """
         sleep(4)
         self.click(*self.LEARN_MORE_BTN)
